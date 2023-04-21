@@ -31,9 +31,10 @@ def makeRequest(option):
         }
         URL = "https://www.instagram.com/graphql/query/?" + urllib.parse.urlencode(PARAMS)
 
-        response = requests.get(url=URL, headers=HEADERS).json()
-        hasNext = response['data']['user'][option['path']]['page_info']['has_next_page']
-        after = response['data']['user'][option['path']]['page_info']['end_cursor']
-        data += response['data']['user'][option['path']]['edges']
+        response = requests.get(url=URL, headers=HEADERS).json()['data']['user'][option['path']]
+        pageInfo = response['page_info']
+        hasNext = pageInfo['has_next_page']
+        after = pageInfo['end_cursor']
+        data += response['edges']
 
     return data
