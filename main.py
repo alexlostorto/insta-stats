@@ -6,6 +6,7 @@ def main():
     followers = createTable('Followers', getFollowers())
     following = createTable('Followings', getFollowings())
 
+    followers.display()
     following.display()
 
 
