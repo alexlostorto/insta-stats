@@ -4,10 +4,10 @@ from src.tables import createTable
 
 def main():
     followers = createTable('Followers', getFollowers())
-    following = createTable('Followings', getFollowings())
+    followings = createTable('Followings', getFollowings())
 
     followers.display()
-    following.display()
+    followings.display()
 
 
 if __name__ == '__main__':
