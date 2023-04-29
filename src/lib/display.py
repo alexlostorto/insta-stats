@@ -37,12 +37,12 @@ def displayTable(self):
 
 
 def getMaxLengths(self):
-    maxLengths = [len(x) + self.padding for x in self.header]
+    maxLengths = [len(x) + self.padding * 2 for x in self.header]
 
     for row in self.contents:
         for i in range(len(row)):
-            if len(row[i]) + self.padding * 2 > maxLengths[i]:
-                maxLengths[i] = len(row[i]) + self.padding * 2
+            if len(str(row[i])) + self.padding * 2 > maxLengths[i]:
+                maxLengths[i] = len(str(row[i])) + self.padding * 2
 
     return maxLengths
 
@@ -63,18 +63,18 @@ def createRow(boxLengths, row, vertical):
     line = ''
 
     for i in range(len(boxLengths)):
-        spaces = boxLengths[i] - len(row[i])
+        spaces = boxLengths[i] - len(str(row[i]))
         back = (spaces + 1) // 2
         front = back - spaces % 2
-        line += vertical + back * ' ' + row[i] + front * ' '
+        line += vertical + back * ' ' + str(row[i]) + front * ' '
 
     return line + vertical
 
 
 def createTitle(boxLengths, title, vertical):
-    spaces = sum(boxLengths) - len(title)
+    spaces = sum(boxLengths) + len(boxLengths) - 1 - len(title)
     back = (spaces + 1) // 2
-    front = back - spaces % 2 + 1
+    front = spaces - back
     line = vertical + back * ' ' + title + front * ' ' + vertical
 
     return line
