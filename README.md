@@ -44,6 +44,24 @@ The program automatically retrieves the user's Instagram statistics using **Inst
 │          saadatikamila         │             Petis Mercon                │
 │      sapphire_and_isabella     │         Sapphire and Isabella           │
 ...
+
+╭──────────────────────────────────────────────────────────────────────────╮
+│                               Non-Followers                              │
+├────────────────────────────────┬─────────────────────────────────────────┤
+│            Username            │                 Full Name               │
+├────────────────────────────────┼─────────────────────────────────────────┤
+│          nicky.rudolph         │               nicky rudolph             │
+│           itsemilylin          │                 emily lin               │
+│          ralph.heimans         │               Ralph Heimans             │
+│      thefuzzypet_official      │                                         │
+│       philipflaemandersen      │           Philip Flaem-Andersen         │
+│             kl.nyc             │                    KL                   │
+│            _gaildes_           │             Corina Teodorescu           │
+│        maisoninvestments       │    Martin & Lewis | Property Investors  │
+│           j_s_visuals          │              Jack Southwart             │
+│         naturescope_jb         │                    JB                   │
+│            rylee0205           │                                         │
+...
 ```
 
 ## ⚡ Quick setup
