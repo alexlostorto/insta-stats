@@ -3,21 +3,17 @@ from src.tables import createTable
 
 
 def main():
-    followers_list = getFollowers()
-    followings_list = getFollowings()
-    dont_follow_back = []
+    followersList = getFollowers()
+    followingsList = getFollowings()
+    dontFollowBack = [f for f in followingsList if f not in followersList]
 
-    for following in followings_list:
-        if following not in followers_list:
-            dont_follow_back.append(following)
-
-    followers = createTable('Followers', followers_list)
-    followings = createTable('Followings', followings_list)
-    non_followers = createTable('Non-Followers', dont_follow_back)
+    followers = createTable('Followers', followersList)
+    followings = createTable('Followings', followingsList)
+    nonFollowers = createTable('Non-Followers', dontFollowBack)
 
     followers.display()
     followings.display()
-    non_followers.display()
+    nonFollowers.display()
 
 
 if __name__ == '__main__':
